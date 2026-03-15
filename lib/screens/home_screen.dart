@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tpm_tugas2/screens/kelompok_screen.dart';
 import '../../../widgets/menu_card.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -58,6 +59,16 @@ class HomeScreen extends StatelessWidget {
             child: const Text('Logout'),
           ),
         ],
+      ),
+    );
+  }
+
+  //About Us
+  void _AboutUs(BuildContext context){
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context)=> const DataKelompok()
       ),
     );
   }
@@ -125,6 +136,12 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton:  FloatingActionButton.extended(
+        onPressed: (){_AboutUs(context);},
+        label: const Text("About Us"),
+        icon: const Icon(Icons.account_circle_sharp), 
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat, 
     );
   }
 }
