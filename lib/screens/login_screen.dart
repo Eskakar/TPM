@@ -68,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 // Judul
                 const Text(
-                  'Kelompok berapa?',
+                  'Silahkan Login',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 32,
@@ -90,7 +90,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   keyboardType: TextInputType.text,
                   textInputAction: TextInputAction.next,
                   decoration: const InputDecoration(
-                    hintText: 'Username KingNabil',
+                    hintText: 'Username tpm2026',
                     prefixIcon: Icon(Icons.person_outline),
                   ),
                 ),
@@ -108,7 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   textInputAction: TextInputAction.done,
                   onSubmitted: (_) => _handleLogin(),
                   decoration: InputDecoration(
-                    hintText: 'Pass nabiltampan123',
+                    hintText: 'Pass tpmasiktahu',
                     prefixIcon: const Icon(Icons.lock_outline),
                     suffixIcon: IconButton(
                       icon: Icon(

@@ -10,7 +10,7 @@ class StopwatchScreen extends StatefulWidget {
 
 class _StopwatchScreenState extends State<StopwatchScreen> {
   Timer? _timer;
-  int _elapsedSeconds = 0; 
+  int _elapsedSeconds = 0; // inisialisasi waktu
   bool _isRunning = false;
 
   @override
@@ -101,7 +101,7 @@ class _StopwatchScreenState extends State<StopwatchScreen> {
                     Text(
                       _formatTime(_elapsedSeconds),
                       style: const TextStyle(
-                        fontSize: 44,
+                        fontSize: 30,
                         fontWeight: FontWeight.w300,
                         letterSpacing: 4,
                         color: Color(0xFF2D2D2D),
