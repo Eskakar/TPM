@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tpm_tugas2/screens/date_converter_screen.dart';
 import '../screens/login_screen.dart';
 import '../screens/home_screen.dart';
 import '../screens/calculator_screen.dart';
@@ -59,6 +60,7 @@ class MyApp extends StatelessWidget {
         '/character-counter': (context) => const CharacterCounterScreen(),
         '/stopwatch': (context) => const StopwatchScreen(),
         '/pyramid': (context) => const PyramidScreen(),
+        '/date-converter': (context) => const DateConverter(),
       },
     );
   }

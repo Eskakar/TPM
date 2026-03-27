@@ -36,6 +36,12 @@ class HomeScreen extends StatelessWidget {
       'color': Color(0xFF3D9EF5),
       'route': '/pyramid',
     },
+    {
+      'title': 'Date\nConverter',
+      'icon': Icons.date_range_rounded,
+      'color': Color.fromARGB(255, 255, 165, 241),
+      'route': '/date-converter',
+    },
   ];
 
   /// Logout confirmation dialog
