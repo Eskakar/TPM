@@ -73,7 +73,7 @@ class _DateConverterState extends State<DateConverter> {
 
     setState(() {
       hasil = """
-      Umur: ${umur['tahun']} tahun ${umur['bulan']} bulan
+      Umur: ${umur['tahun']} tahun ${umur['bulan']} bulan ${umur['hari']} hari ${umur['jam']} jam ${umur['menit']} menit
       Hijriyah: ${hijri['hari']}/${hijri['bulan']}/${hijri['tahun']}
       Weton: ${weton['weton']}
       """;

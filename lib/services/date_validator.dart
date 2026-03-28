@@ -43,6 +43,18 @@ class DateHelper {
     int tahun = now.year - lahir.year;
     int bulan = now.month - lahir.month;
     int hari = now.day - lahir.day;
+    int jam = now.hour - lahir.hour;
+    int menit = now.minute - lahir.minute;
+
+    if (menit < 0) {
+      jam--;
+      menit += 60;
+    }
+
+    if (jam < 0) {
+      hari--;
+      jam += 24;
+    }
 
     if (hari < 0) {
       bulan--;
@@ -58,6 +70,8 @@ class DateHelper {
       "tahun": tahun,
       "bulan": bulan,
       "hari": hari,
+      "jam": jam,
+      "menit": menit,
     };
   }
 
@@ -116,13 +130,13 @@ class DateHelper {
   /// HITUNG WETON 
   static Map<String, String> hitungWeton(DateTime date) {
     List<String> hariMasehi = [
-      "Minggu",
       "Senin",
       "Selasa",
       "Rabu",
       "Kamis",
       "Jumat",
-      "Sabtu"
+      "Sabtu",
+      "Minggu"
     ];
 
     List<String> pasaran = [
@@ -133,13 +147,12 @@ class DateHelper {
       "Kliwon"
     ];
 
-    // epoch weton (1 Jan 1900 = Senin Legi)
     DateTime base = DateTime(1900, 1, 1);
-
     int selisihHari = date.difference(base).inDays;
 
-    String hari = hariMasehi[date.weekday % 7];
-    String pas = pasaran[selisihHari % 5];
+    String hari = hariMasehi[date.weekday - 1];
+
+    String pas = pasaran[(selisihHari + 1) % 5 ];
 
     return {
       "hari": hari,
